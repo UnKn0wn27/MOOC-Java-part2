@@ -12,16 +12,15 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Printer {
-    private File file;
-    private Scanner reader;
+    private String fileName;
     
     public Printer(String fileName) throws Exception{
-        this.file = new File(fileName);
-        this.reader = new Scanner(this.file);
+        this.fileName = fileName;
     }
     
     public void printLinesWhichContain(String word){
-        File file = new File("textfile.txt");
+        File file = new File(fileName);
+        
         Scanner reader = new Scanner(file);
         
         while(reader.hasNextLine()){
